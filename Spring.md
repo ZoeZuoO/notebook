@@ -173,9 +173,8 @@
   </property>
   ```
 
-  
+![image](https://github.com/ZoeZuoO/notebook/blob/master/images/1-1.png)
 
-![1596383534373](F:\GitHub\notebook\%5CUsers%5Cpc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1596383534373.png)
 ### AOP（面向切面编程）61-82
 
 主要用来写声明式事务--->首先学习spring操作数据库---spring-jdbcTemplate
