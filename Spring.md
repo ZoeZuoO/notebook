@@ -127,7 +127,55 @@
   * 使用null值
     1. 默认引用类型就是null，基本类型是默认值
     2. 要在<property>标签体中进行复杂的赋值:<null/>
+ 
+ 
+- **ref引用内部Bean**
 
+  - ref 代表引用外面的一个值，相当于ioc.getBean()
+
+- **引用外部Bean**
+
+  - 相当于new了一个对象
+
+  
+
+  ```
+  <property name="">
+  	<!--这属于内部bean，不能被获取到，用id也获取不到，只能内部使用-->
+  	<bean class="">
+  		<property>...</property>
+  	</bean>
+  </property>	
+  
+  	<!--list属性赋值-->
+  <property name="">
+  	<list></list>
+  </property>
+  
+  	<!--map属性赋值-->
+  <property name="">	
+      <map>
+          <entry key="" value=""></entry>
+          <entry key="">
+              <bean>
+                  <property></property>	
+              </bean>
+          </entry>
+      </map>
+  </property>
+  
+  <property name="">
+      <!--private Properties properties;-->
+   	<props>
+   	<!--等于new Properties();所有的k=v都是String，值直接写在标签体中即可-->
+   		<prop key="name>zoe</prop>
+   	</props>
+  </property>
+  ```
+
+  
+
+![1596383534373](F:\GitHub\notebook\%5CUsers%5Cpc%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1596383534373.png)
 ### AOP（面向切面编程）61-82
 
 主要用来写声明式事务--->首先学习spring操作数据库---spring-jdbcTemplate
