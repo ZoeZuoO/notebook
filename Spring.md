@@ -124,7 +124,7 @@
 
 * **为各种属性赋值**
 
-  * 使用null值
+  * **使用null值**
     1. 默认引用类型就是null，基本类型是默认值
     2. 要在<property>标签体中进行复杂的赋值:<null/>
  
@@ -174,6 +174,20 @@
   ```
 
 ![image](https://github.com/ZoeZuoO/notebook/blob/master/images/1-1.png)
+
+* **util名称空间**创建集合类型的bean，方便引用
+
+  * ```xml
+    相当于new LinkedHashMap<>()
+    <util:map id="">
+    	<!--添加元素-->
+    </util:map>
+    ```
+
+  * 还有util:list等
+
+* **级联属性（属性的属性）赋值**
+
 
 ### AOP（面向切面编程）61-82
 
