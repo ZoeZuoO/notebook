@@ -104,9 +104,9 @@
   2. ioc.getBean("id名称",Class)
 
 * **调用有参构造器进行创建对象并赋值**
-
-  <constractor-arg name="" value="" index="" type=""></constractor-arg>
-
+```xml
+<constractor-arg name="" value="" index="" type=""></constractor-arg>
+```
   1. 有几个参数，就有几个该标签
 
   2. 也可以省略name属性，但要按照顺序构造器参数的位置
@@ -118,7 +118,7 @@
 
   1. 导入p名称空间
 
-  2. <bean p:xxxx>写带前缀的标签/属性
+  2. ```<bean p:xxxx>```写带前缀的标签/属性
 
      *（奇怪的知识：xml---可扩展的标记语言）*
 
@@ -127,7 +127,11 @@
   * **使用null值**
     1. 默认引用类型就是null，基本类型是默认值
     2. 要在<property>标签体中进行复杂的赋值:<null/>
- 
+    ```
+     <property ref="">
+       <null/>
+     </property>
+    ```
  
 - **ref引用内部Bean**
 
@@ -136,8 +140,6 @@
 - **引用外部Bean**
 
   - 相当于new了一个对象
-
-  
 
   ```
   <property name="">
@@ -175,7 +177,8 @@
 
 ![image](https://github.com/ZoeZuoO/notebook/blob/master/images/1-1.png)
 
-* **util名称空间**创建集合类型的bean，方便引用
+- **util名称空间**
+  - 创建集合类型的bean，方便引用
 
   * ```xml
     相当于new LinkedHashMap<>()
@@ -186,8 +189,37 @@
 
   * 还有util:list等
 
-* **级联属性（属性的属性）赋值**
+- **级联属性（属性的属性）赋值**
+  * 级联属性可以修改属性的属性，但是注意，原来的bean值会被修改
 ![image](https://github.com/ZoeZuoO/PictureBed/blob/master/5.png)
+
+* **通过继承实现bean配置信息的重用**
+
+  * parent：指定当前bean配置信息继承于谁
+
+  ```xml
+      <bean id="person" class="XXX">
+          <property name="lastname" value="张三"></property>
+          <property name="age" value="18"></property>
+          <property name="gender" value="men"></property>
+      </bean>
+  
+      <bean id="personSon" class="XXX"(可加可不加，加上好看~) parent="person">
+          <property name="lastname" value="张三"></property>
+      </bean>
+  ```
+
+* **通过abstract属性创建模板bean**
+
+  * abstract="true",使得这个bean的配置是抽象的，不再能获取他的实例，他只能被别人继承
+
+* **bean之间的依赖**
+
+  * 
+
+* **测试bean的作用域，分别创建单实例与多实例的bean**
+
+  * 
 
 ### AOP（面向切面编程）61-82
 
