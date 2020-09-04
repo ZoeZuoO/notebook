@@ -2,7 +2,7 @@
 
 经过两天的API研究，最终实现了微服务下使用DataGrid表格。
 
-官方API地址：[官方API地址l链接](http://www.jeasyui.net/plugins/183.html)
+官方API地址：[官方API地址链接](http://www.jeasyui.net/plugins/183.html)
 
 * **获取某数据字段**
 
