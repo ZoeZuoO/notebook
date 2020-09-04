@@ -8,13 +8,13 @@
 
 -sources：源码
 
-![image-20200722204939733](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200722204939733.png)
+![1-1](https://github.com/ZoeZuoO/PictureBed/blob/master/1.png)
 
 ### spring的模块划分：
 
 [^1]: 绿色表示模块，黑色表示由哪些jar包组成
 
-![image-20200723114251828](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200723114251828.png)
+![1-2](https://github.com/ZoeZuoO/PictureBed/blob/master/2.png)
 
 * Test：Spring单元测试模块
 
@@ -53,11 +53,11 @@
 
       全部自己new出来
 
-      ![image-20200723125859234](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200723125859234.png)
+      ![1-3](https://github.com/ZoeZuoO/PictureBed/blob/master/3.png)
 
     * 被动式：交给容器创建和设置我们需要的资源
 
-      ![image-20200723125935548](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200723125935548.png)
+      ![1-4](https://github.com/ZoeZuoO/PictureBed/blob/master/4.png)
 
   * 容器：管理所有的组件（有功能的类），在一个类中需要用到另一些类时，容器帮我们把另一些类的对象创建出来，并赋值过去，我们直接接收，使用就可以
 
@@ -187,7 +187,7 @@
   * 还有util:list等
 
 * **级联属性（属性的属性）赋值**
-
+![image](https://github.com/ZoeZuoO/PictureBed/blob/master/5.png)
 
 ### AOP（面向切面编程）61-82
 
