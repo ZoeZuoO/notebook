@@ -215,11 +215,64 @@
 
 * **bean之间的依赖**
 
-  * 
+  1. bean的创建顺序是按配置的顺序，若加入依赖depand-on某些bean，则先创建依赖的bean。
+
+     如下，先创建xl，才会创建x2
+
+  ```xml
+  <bean id="x2" class="x2" depand-on="x1"></bean>
+  ```
 
 * **测试bean的作用域，分别创建单实例与多实例的bean**
 
-  * 
+  * bean的作用域—scope：
+
+    * * 
+
+    ```xml
+    <bean scope=""></bean>
+    ```
+
+    prototype：多实例的
+
+    1. 容器启动默认不会去创建多实例Bean
+    2. 获取的时候才会创建这个Bean
+    3. 每次获取都会创建一个新的对象
+
+    singleton：单实例的，默认的
+
+    1. 单实例的bean在**容器启动完成之前**就已经创建好对象，保存在容器中了
+    2. 任何时候获取都是获取之前创建好的那个对象
+
+    request：在web环境下，同一次请求创建一个Bean实例（没用）
+
+    session：在web环境下，同一次会话创建一个Bean实例（没用）
+
+  * 指定bean是否单实例，xxx；默认：单实例的
+
+* **配置通过静态工厂方法创建的bean、实例工厂方法创建的bean、FactoryBean**
+
+  * bean的创建默认就是框架利用反射new出来的bean实例
+
+  * 静态工厂模式：工厂本身不用创建对象（不用创建工厂本身），通过静态方法调用，对象 = 工厂类.工厂方法名();
+
+    factory-method:指定哪个方法是工厂方法 
+
+    construcor-org:为方法传参
+
+    ```xml
+    <bean id="" class="静态工厂全类名" factory-method="isApr">
+        <construcor-org value="xxx"></construcor-org>
+    </bean>
+    ```
+
+    
+
+  * 实例工厂模式：工厂本身需要创建对象：
+
+    工厂类 工厂对象 = new 工厂类();
+
+    工厂对象.isApr("xxx");
 
 ### AOP（面向切面编程）61-82
 
