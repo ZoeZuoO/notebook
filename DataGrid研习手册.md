@@ -50,7 +50,7 @@
 
   ​	$("#dataTest").datagrid('hideColumn', 'requirtCompanyName');
 
-  ![image-20200811100046258](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200811100046258.png)
+  ![image-20200811100046258](https://github.com/ZoeZuoO/PictureBed/blob/master/9.png)
 
    2. 设置属性 hidden:true 
 
@@ -85,7 +85,7 @@
 
   ​	$("#dataTest").datagrid('showColumn', 'requirtCompanyName');
 
-![image-20200811095958060](C:\Users\Zoe Zuo\AppData\Roaming\Typora\typora-user-images\image-20200811095958060.png)
+![image-20200811095958060](https://github.com/ZoeZuoO/PictureBed/blob/master/8.png)
 
 * **给列赋值**
 
